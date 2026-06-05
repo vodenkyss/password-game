@@ -31,7 +31,6 @@ jobs:
         with:
           path: ./dist
 
-  # SEM PATŘÍ TEN NOVÝ JOB PRO NASAZENÍ
   deploy:
     permissions:
       contents: read
@@ -41,7 +40,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build # Tohohle si všimni -> říká to, že se čeká, až doběhne build
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

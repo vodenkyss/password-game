@@ -5,7 +5,6 @@ interface Props {
     password: string; // Tady to máš správně
 }
 
-// OPRAVA: Přidán parametr 'password' do závorky, aby ho komponenta vůbec přijímala
 const PasswordInput: React.FC<Props> = ({ setPassword, password }) => {
     const [showPassword, setShowPassword] = useState(false);
 
@@ -20,7 +19,6 @@ const PasswordInput: React.FC<Props> = ({ setPassword, password }) => {
                     type={showPassword ? 'text' : 'password'}
                     className="form-control border-end-0"
 
-                    // OPRAVA: Propojení se stavem, aby interval mohl heslo doplňovat
                     value={password}
 
                     onChange={(e) => setPassword(e.target.value)}
