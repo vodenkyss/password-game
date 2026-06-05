@@ -1,0 +1,78 @@
+:root {
+  --primary-color: #3498db;
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-color: #212529;
+  --border-color: #dee2e6;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #5dade2;
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f1f5f9;
+    --border-color: #334155;
+  }
+
+
+  .form-control {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
+    border-color: #334155 !important;
+  }
+
+  .form-control::placeholder {
+    color: #94a3b8;
+  }
+}
+
+
+ul {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px !important;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.custom-card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.input-group .btn {
+  transition: all 0.2s ease-in-out;
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.input-group .btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color) !important;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
